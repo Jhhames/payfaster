@@ -6,11 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Account extends Model
 {
-    public function receipt(){
+    protected $fillable = [
+        'id',
+        'name',
+        'bankName',
+        'phoneNumber',
+        'fingerPrint',
+        'bvn',
+        'imageUrl',
+        'balance',
+        'accountNumber',
+    ];
+    public function receipt()
+    {
         return $this->hasMany(Receipt::class);
     }
 
-    public function bvn(){
+    public function bvn()
+    {
         return $this->belongsTo(Bvn::class);
     }
 }
