@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateBvnsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('bvns', function (Blueprint $table) {
+            $table->string('id');
+            $table->primary('id');
+            $table->string('name');
+            $table->string('accountNumber');
+            $table->string('bankName');
+            $table->string('bvn');
+            $table->string('fingerPrint');
+            $table->string('imageUrl');
+            $table->string('phoneNumber');
+            $table->integer('balance');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('bvns');
+    }
+}
