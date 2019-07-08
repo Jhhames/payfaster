@@ -14,8 +14,7 @@ class CreateBvnsTable extends Migration
     public function up()
     {
         Schema::create('bvns', function (Blueprint $table) {
-            $table->string('id');
-            $table->primary('id');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('accountNumber');
             $table->string('bankName');

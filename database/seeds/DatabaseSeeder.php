@@ -18,6 +18,6 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         factory(Account::class,10)->create();
-        factory(Receipt::class,10)->create();
+        // factory(Receipt::class,10)->create();
     }
 }

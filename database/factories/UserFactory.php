@@ -32,28 +32,30 @@ $factory->define(Account::class, function (Faker $faker) {
         'UBA Bank',
     ];
 
-
+// 2348132537277
+// 2348148211618
     return [
-        'id' => str_random('10'),
+        // 'id' => str_random('10'),
         'name' => $faker->name,
         'bankName' => array_random($bank),
         'phoneNumber' => $phone,
         'fingerPrint' => $phone,
         'bvn' => $phone,
         'imageUrl' => $faker->url,
-        'balance' => rand(999, 9999999),
+        'balance' => rand(999, 9999),
         'accountNumber' => rand(999999999, 9999999999),
 
     ];
 });
-$factory->define(Receipt::class, function (Faker $faker) {
-    $phone = rand(999999999, 99999999999);
-    return [
-        'id' => str_random('10'),
-        'name' => $faker->name,
-        'phoneNumber' => $phone,
-        'amount' => rand(999, 9999),
-        'shopName' => $faker->company
+// $factory->define(Receipt::class, function (Faker $faker) {
+//     $phone = rand(999999999, 99999999999);
+//     $shops = ['BanWill','ACE Supermarket','Indulge'];
+//     return [
+//         'id' => str_random('10'),
+//         'name' => $faker->name,
+//         'phoneNumber' => $phone,
+//         'amount' => rand(999, 9999),
+//         'shopName' => array_random($shops)
 
-    ];
-});
+//     ];
+// });
