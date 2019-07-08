@@ -17,6 +17,9 @@ class Account extends Model
         'balance',
         'accountNumber',
     ];
+
+    protected $hidden = ['created_at','updated_at'];
+
     public function receipt()
     {
         return $this->hasMany(Receipt::class);

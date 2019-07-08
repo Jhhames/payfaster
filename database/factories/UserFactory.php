@@ -28,7 +28,7 @@ $factory->define(Account::class, function (Faker $faker) {
         'Access Bank',
         'Guaranty Trust Bank',
         'First Bank',
-        'Polaris Bank'.
+        'Polaris Bank',
         'UBA Bank',
     ];
 
